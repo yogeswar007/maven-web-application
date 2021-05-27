@@ -3,8 +3,8 @@ node('wallmart-node')
  
   def mavenHome = tool name: "maven3.8.1"
   
-  //properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
-  
+  /*properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
+  */
   stage('CheckoutCode')
   {
   git branch: 'development', credentialsId: 'e373d4ed-d201-4e75-96e6-99ea433d5620', url: 'https://github.com/yogeswar007/maven-web-application.git'
