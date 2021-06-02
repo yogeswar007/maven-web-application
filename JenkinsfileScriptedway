@@ -15,7 +15,7 @@ node
   sh "${mavenHome}/bin/mvn clean package"
   }
  
-  /*stage('ExecuteSonarQubeReport')
+  stage('ExecuteSonarQubeReport')
   {
   sh "${mavenHome}/bin/mvn sonar:sonar"
   }
@@ -23,7 +23,7 @@ node
   stage('UploadArtifactsintoNexus')
   {
   sh "${mavenHome}/bin/mvn deploy"
-  } */
+  } 
   
   stage('DeployAppintoTomcatServer')
   {
