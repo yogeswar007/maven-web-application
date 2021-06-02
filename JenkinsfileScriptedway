@@ -23,7 +23,7 @@ node
   stage('UploadArtifactsintoNexus')
   {
   sh "${mavenHome}/bin/mvn deploy"
-  } 
+  } */
   
   stage('DeployAppintoTomcatServer')
   {
@@ -31,7 +31,7 @@ node
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.47.101:/opt/apache-tomcat-9.0.45/webapps/"
   }
   }
-  */
+  
   
   stage('SendEmailNotification')
   {
